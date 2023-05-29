@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Encriptador</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/styles.css"/>
+    </head>
+    <header>
+        <img src="img/logo.png" alt="logo-de-Alura"/>
+    </header>
+    <body>
+        <section class="contenedor">
+            <section class="cont-encriptador">
+                <textarea
+                    name="ingrese-texto"
+                    class="ingrese-texto"
+                    id="ingrese-texto"
+                    cols="30"
+                    rows="10"
+                    placeholder="Ingrese el texto aqui"
+                ></textarea>
+                <p class="advertencia">
+                    <img src="img/alerta.png" alt="signo-de-advertencia-(!)" />
+                    Solo letras minúsculas y sin acentos
+                </p>
+                <div class="botones">
+                    <button class="btn btn-encriptar" id="btn-encriptar">Encriptar</button>
+                    <button class="btn btn-desencriptar" id="btn-desencriptar">Desencriptar</button>
+                </div>
+            </section>
+            <section class="cont-resultado">
+                <div class="resultado-imagen" id="resultado-imagen">
+                    <div class="buscando"></div>
+                    <div class="notas">
+                        <h2 class="nota-titulo">Ningún mensaje fue encontrado</h2>
+                        <p class="nota-detalle">
+                            Ingresa el texto que desees encriptar o desencriptar.
+                        </p>
+                    </div>
+                </div>
+                <div class="resultado-copiar" id="resultado-copiar" style="display: none;">
+                    <div class="traduccion" id="traduccion">
+                        <textarea name="resultado" class="resultado" id="resultado" cols="30" rows="10" readonly="readonly"></textarea>
+                    </div>
+                    <div class="copiar">
+                        <button class="btn btn-copiar" id="btn-copiar">
+                            Copiar
+                        </button>
+                        <p class="texto-copiado" id="texto-copiado" style="display: none;">¡Texto copiado!</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="contenedor-dos" id="contenedor-dos">
+            <section class="cont-modales" id="cont-modales">
+                <div class="modal-sintexto modales" id="modal-sintexto">
+                    <div class="header">ADVERTENCIA</div>
+                    <div class="body"></div>
+                    <div class="footer">Debes ingresar un texto</div>
+                </div>
+                <div class="modal-mayusculas modales" id="modal-mayusculas">
+                    <div class="header">ADVERTENCIA</div>
+                    <div class="body"></div>
+                    <div class="footer">No se admiten mayúsculas ni carácteres especiales</div>
+                </div>
+                <div class="modal-textonoencriptado modales" id="modal-textonoencriptado">
+                    <div class="header">ADVERTENCIA</div>
+                    <div class="body"></div>
+                    <div class="footer">El texto ingresado no tiene encriptación</div>
+                </div>
+                <div class="modal-cerrar modales">
+                    <button class="btn btn-cerrar" id="btn-cerrar" for="ingrese-texto">Ingresar texto</button>
+                </div>
+            </section>
+        </section>
+    </body>
+    <script src="js/index.js"></script>
+</html>
